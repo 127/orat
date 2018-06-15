@@ -1,7 +1,7 @@
 # describe 'test browser', :type => :feature, :js => true do
 #   it "makes nothing" do
 #     lang = 'en'
-#     url = 'https://www.test.com'
+#     url = 'https://www.ya.ru'
 #     visit url
 #     # page.execute_script("$('#langMenuContainer').trigger('mouseover')")
 #     page.find('#langMenuContainer').hover

@@ -24,7 +24,7 @@ Within a terminal in a project folder:
 Within a terminal in a project folder:
 
 - To use Chromium set ```Capybara.javascript_driver = :selenium_chrome_headless``` in *spec/spec_helper.rb* and change browser in a Docker file (follow comments)
-- Build a docker image named *dockerrspec* with ```docker build --rm -t dockerrspec```
+- Build a docker image named *dockerrspec* with ```docker build --rm -t dockerrspec .```
 - Run tests with ```docker run -it --rm --name remotetesting dockerrspec```
 
 *WARNING* always make sure that Firefox or Chromium runs in a headless mode in case of Docker.

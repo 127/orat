@@ -3,7 +3,7 @@ feature 'auth test', :js => true do
     @valid_login    = 'VALIDTESTLOGIN'
     @valid_password = 'VALIDTESTPASSWORD'
     
-    @url = 'https://test.com'
+    @url = 'https://ya.ru'
     @lang = 'en'
     @login_path = "/"
   end

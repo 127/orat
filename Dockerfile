@@ -1,7 +1,7 @@
+# FROM selenium/standalone-firefox
+# FROM selenium/standalone-chrome
 FROM ruby:2.5.1
-RUN apt -y update && apt -y upgrade
-RUN apt install -y firefox
-# comment Firefox installation and uncomment Chromium if needed
+# RUN apt -y update && apt -y upgrade
 # RUN apt install -y chromium
 
 RUN bundle config --global frozen 1
@@ -13,6 +13,6 @@ COPY . .
 
 RUN bundle install
 
-RUN ls -la .
+# RUN ls -la .
 
-CMD  ["rspec"]
+# CMD  ["rspec"]
