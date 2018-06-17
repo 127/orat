@@ -1,11 +1,12 @@
 FROM ubuntu 
 RUN apt -y update && apt -y upgrade
 
-RUN apt install -y wget curl gnupg2
-RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+RUN apt install -y curl 
+#wget gnupg2
+# RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 RUN \curl -sSL https://get.rvm.io | bash
-RUN source /etc/profile.d/rvm.sh
-RUN rvm install 2.5.1
+# RUN source /etc/profile.d/rvm.sh
+RUN /bin/bash -l -c 'rvm install 2.5.1'
 
 #=========
 # Firefox
