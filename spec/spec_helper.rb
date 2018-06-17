@@ -36,7 +36,7 @@ end
 
 
 # CONFIG which browser and mode to run tests with
-Capybara.javascript_driver = :selenium_chrome_headless
+Capybara.javascript_driver = :selenium_firefox_headless
 
 JsonMatchers.schema_root = "spec/support/api/schemas"
 
