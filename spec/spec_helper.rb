@@ -4,6 +4,9 @@ require "json_matchers/rspec"
 require 'selenium-webdriver'
 require 'faker'
 
+# Capybara.app_host = "http://#{ENV['APP_HOST']}"
+# Capybara.run_server = false
+
 # Firefox GUI Selenium driver
 Capybara.register_driver :selenium_firefox do |app|
   Capybara::Selenium::Driver.new app, :browser => :firefox
