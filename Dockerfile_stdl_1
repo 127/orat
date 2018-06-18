@@ -1,0 +1,37 @@
+FROM ubuntu:18.04
+
+RUN apt -y update && apt -y upgrade
+RUN apt install -y curl wget gnupg2 
+# nokogiri
+RUN apt install -y build-essential patch ruby-dev zlib1g-dev liblzma-dev
+RUN apt install -y ruby-full
+RUN ruby -v
+
+RUN gem install bundler --no-doc --no-ri
+
+#=========
+# Firefox
+#=========
+RUN apt install -y firefox
+
+#=========
+# Google Chrome
+#=========
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+#
+# # OR change to Chromium instead of Google Chrome
+# # RUN apt install -y chromium
+
+RUN bundle config --global frozen 1
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN bundle install
+
+# RUN ls -la .
+
+CMD  ["rspec"]
