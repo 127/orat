@@ -23,6 +23,7 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A170311380
 RUN curl -sSL https://get.rvm.io | bash
 RUN /bin/bash -c -l 'source /etc/profile.d/rvm.sh'
 RUN /bin/bash -c -l 'rvm install $RUBY_VERSION'
+RUN /bin/bash -c -l 'rvm rvmrc warning ignore allGemfiles'
 
 # Setup app
 RUN /bin/bash -c -l 'bundle config --global frozen 1'
