@@ -7,7 +7,6 @@ It can be used for:
 - API testing and mathching responses/requests against [JSON-schema](http://json-schema.org/) provided.
 
 ## Requirements 
-
 - Rvm (optional)
 - Docker (optional)
 - Firefox (using Google Chrome/Chromium requires additional configuring)
@@ -42,3 +41,6 @@ By default headless Firefox is set ```Capybara.javascript_driver = :firefox_head
 - :selenium_firefox_headless
 - :selenium_chrome
 - :selenium_chrome_headless
+
+## Troubleshoot
+- ```getaddrinfo: nodename nor servname provided, or not known```: OS X must have ```127.0.0.1	localhost``` in ```/etc/hosts```
